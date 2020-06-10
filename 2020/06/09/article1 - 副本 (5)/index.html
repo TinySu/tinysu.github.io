@@ -6,33 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo学习 | TinySu</title>
+  <title>通过dump线程查看线程问题 | TinySu</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="边学边总结 几大步骤生成初始博客123$ cd f:&#x2F;myblogs&#x2F;hexo$ cd blog2$ hexo init">
+  <meta name="description" content="1F:\Program Files\Java\jdk1.8.0_221\bin     参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;xzongyuan&#x2F;article&#x2F;details&#x2F;71383379">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo学习">
-<meta property="og:url" content="http://yoursite.com/2020/06/08/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="通过dump线程查看线程问题">
+<meta property="og:url" content="http://yoursite.com/2020/06/09/article1%20-%20%E5%89%AF%E6%9C%AC%20(5)/index.html">
 <meta property="og:site_name" content="TinySu">
-<meta property="og:description" content="边学边总结 几大步骤生成初始博客123$ cd f:&#x2F;myblogs&#x2F;hexo$ cd blog2$ hexo init">
+<meta property="og:description" content="1F:\Program Files\Java\jdk1.8.0_221\bin     参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;xzongyuan&#x2F;article&#x2F;details&#x2F;71383379">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215039604.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215154413.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215843740.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604220428437.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604220555495.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604221935981.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604222119326.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604222953563.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604224251806.png">
-<meta property="og:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604223921736.png">
-<meta property="article:published_time" content="2020-06-08T05:55:24.000Z">
-<meta property="article:modified_time" content="2020-06-10T16:30:57.627Z">
+<meta property="og:image" content="c:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609191754401.png">
+<meta property="og:image" content="c:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609192046243.png">
+<meta property="og:image" content="c:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609192150755.png">
+<meta property="article:published_time" content="2020-06-09T10:24:24.000Z">
+<meta property="article:modified_time" content="2020-06-09T11:23:36.710Z">
 <meta property="article:author" content="TinySu">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="Java多线程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215039604.png">
+<meta name="twitter:image" content="c:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609191754401.png">
   
     <link rel="alternative" href="/atom.xml" title="TinySu" type="application/atom+xml">
   
@@ -211,14 +204,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hexo学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-article1 - 副本 (5)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Hexo学习
+      通过dump线程查看线程问题
     </h1>
   
 
@@ -230,8 +223,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/06/08/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2020-06-08T05:55:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
+<a href="/2020/06/09/article1%20-%20%E5%89%AF%E6%9C%AC%20(5)/" class="archive-article-date">
+        <time datetime="2020-06-09T10:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
 </a>
 
   
@@ -244,7 +237,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">255字</span>
+      <span class="post-count">18字</span>
     </span>
   </span>
 
@@ -264,47 +257,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>边学边总结</p>
-<h2 id="几大步骤"><a href="#几大步骤" class="headerlink" title="几大步骤"></a>几大步骤</h2><h3 id="生成初始博客"><a href="#生成初始博客" class="headerlink" title="生成初始博客"></a>生成初始博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd f:&#x2F;myblogs&#x2F;hexo</span><br><span class="line">$ cd blog2</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F:\Program Files\Java\jdk1.8.0_221\bin</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
-
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215039604.png" alt="image-20200604215039604"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215154413.png" alt="image-20200604215154413"></p>
-<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>使用  VSCode打开blog2文件夹下的_config.yml，在最后找到</p>
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604215843740.png" alt="image-20200604215843740"></p>
-<p>改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;TinySu&#x2F;tinysu.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>在Blog目录下安装一个hexo部署插件</p>
-<p>在git中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604220428437.png" alt="image-20200604220428437"></p>
-<p>部署到github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604220555495.png" alt="image-20200604220555495"></p>
-<p>按提示登录github，输入用户名和密码，完成</p>
-<h3 id="改主题"><a href="#改主题" class="headerlink" title="改主题"></a>改主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 主题的git themes&#x2F;yilia_plus</span><br></pre></td></tr></table></figure>
-
-<p>比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;JoeyBling&#x2F;hexo-theme-yilia-plus.git themes&#x2F;yilia_plus</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604221935981.png" alt="image-20200604221935981"></p>
-<p>使用  VSCode打开blog2文件夹下的_config.yml，找到最后，改为themes中的刚下载的主题名字</p>
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604222119326.png" alt="image-20200604222119326"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean #清除数据库</span><br><span class="line">$ hexo g #生成静态网站</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604222953563.png" alt="image-20200604222953563"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s #查看效果</span><br><span class="line">$ hexo d #部署到github</span><br></pre></td></tr></table></figure>
-
-<h3 id="加网易云音乐"><a href="#加网易云音乐" class="headerlink" title="加网易云音乐"></a>加网易云音乐</h3><p>在网易云音乐网页版找到自己喜欢的音乐，复制外链</p>
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604224251806.png" alt="image-20200604224251806"></p>
-<p>打开 <code>themes/yilia/layout/_partial/left-col.ejs</code>文件，替换图中音乐分享外链</p>
-<p><img src="https://tinysu.gitee.io/giteephotobed/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200604223921736.png" alt="image-20200604223921736"></p>
+<p><img src="C:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609191754401.png" alt="image-20200609191754401"></p>
+<p><img src="C:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609192046243.png" alt="image-20200609192046243"></p>
+<p><img src="C:%5CUsers%5CMaiBenBen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200609192150755.png" alt="image-20200609192150755"></p>
+<p>参考：<a href="https://blog.csdn.net/xzongyuan/article/details/71383379" target="_blank" rel="noopener">https://blog.csdn.net/xzongyuan/article/details/71383379</a></p>
 
     
 
@@ -351,7 +309,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2020/06/08/Hexo学习笔记/" title="Hexo学习" target="_blank">http://yoursite.com/2020/06/08/Hexo学习笔记/</a>
+          <a href="http://yoursite.com/2020/06/09/article1 - 副本 (5)/" title="通过dump线程查看线程问题" target="_blank">http://yoursite.com/2020/06/09/article1 - 副本 (5)/</a>
         </li>
         
         <li>
@@ -373,7 +331,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java多线程</a>
         		</li>
       		
 		</ul>
@@ -429,7 +387,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/08/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/09/article1%20-%20%E5%89%AF%E6%9C%AC%20(5)/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -444,7 +402,7 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/06/09/article1%20-%20%E5%89%AF%E6%9C%AC%20(8)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/06/09/article1%20-%20%E5%89%AF%E6%9C%AC%20(4)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -454,8 +412,8 @@
     </a>
   
   
-    <a href="/2020/06/05/Hello%20World/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/06/09/article1%20-%20%E5%89%AF%E6%9C%AC%20(6)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">通过dump线程查看线程问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -482,7 +440,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#几大步骤"><span class="toc-number">1.</span> <span class="toc-text">几大步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成初始博客"><span class="toc-number">1.1.</span> <span class="toc-text">生成初始博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到github"><span class="toc-number">1.2.</span> <span class="toc-text">部署到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改主题"><span class="toc-number">1.3.</span> <span class="toc-text">改主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加网易云音乐"><span class="toc-number">1.4.</span> <span class="toc-text">加网易云音乐</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
