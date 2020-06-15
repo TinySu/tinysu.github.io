@@ -5,23 +5,31 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Java多线程 | TinySu</title>
+  <link rel="dns-prefetch" href="https://tinysu.github.io">
+  <title>毕设深度学习踩坑（1） | TinySu</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TinySu">
-<meta property="og:url" content="http://yoursite.com/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
+  <meta name="description" content="摘要：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="毕设深度学习踩坑（1）">
+<meta property="og:url" content="https://tinysu.github.io/2020/06/14/%E6%AF%95%E8%AE%BE%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B8%A9%E5%9D%91%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="TinySu">
+<meta property="og:description" content="摘要：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="f:%5CMyBlogs%5CgiteePhotoBed%5Cimage-20200614234556439.png">
+<meta property="article:published_time" content="2020-06-14T06:27:24.000Z">
+<meta property="article:modified_time" content="2020-06-15T16:37:47.708Z">
 <meta property="article:author" content="TinySu">
+<meta property="article:tag" content="毕设">
+<meta property="article:tag" content="深度学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="f:%5CMyBlogs%5CgiteePhotoBed%5Cimage-20200614234556439.png">
   
     <link rel="alternative" href="/atom.xml" title="TinySu" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.jpg">
+    <link rel="icon" href="/img/favicon2.jpg">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -197,194 +205,322 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-毕设深度学习踩坑（1）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/09/article1/" class="archive-article-date">
-        <time datetime="2020-06-09T10:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/09/article1/" target="_blank">通过dump线程查看线程问题</a>
   
+    <h1 class="article-title" itemprop="name">
+      毕设深度学习踩坑（1）
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/06/14/%E6%AF%95%E8%AE%BE%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B8%A9%E5%9D%91%EF%BC%881%EF%BC%89/" class="archive-article-date">
+        <time datetime="2020-06-14T06:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">269字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h1><p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+<a id="more"></a>
+
+<h1 id="1、想在Jupyter-Notebook中运行-py文件"><a href="#1、想在Jupyter-Notebook中运行-py文件" class="headerlink" title="1、想在Jupyter Notebook中运行.py文件"></a>1、想在Jupyter Notebook中运行.py文件</h1><blockquote>
+<p>想要执行<code>python demo.py</code>这样的命令，在Anaconda Prompt的命令行下虽然可以，但想要在Jupyter Notebook中执行就出了问题，会报错：</p>
+</blockquote>
+<p><img src="F:%5CMyBlogs%5CgiteePhotoBed%5Cimage-20200614234556439.png" alt="image-20200614234556439"></p>
+<blockquote>
+<p>解决方法</p>
+</blockquote>
+<p>参考一篇<a href="https://blog.csdn.net/DoReAGON/article/details/100122750?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">文章</a>了解到，在Jupyter Notebook中这样写就行了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%run xx.py</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、MiB-s是个什么单位"><a href="#2、MiB-s是个什么单位" class="headerlink" title="2、MiB/s是个什么单位"></a>2、MiB/s是个什么单位</h1><p>参考一篇<a href="https://blog.csdn.net/lantianjialiang/article/details/78728268" target="_blank" rel="noopener">文章</a>了解到：</p>
+<ul>
+<li><p>Mbit/s的意思是每秒中传输10^6 bit的数据，也写成Mbps</p>
+</li>
+<li><p>MB/s的意思是每秒中传输10^6 byte的数据</p>
+</li>
+<li><p>MiB/s的意思是每秒中传输2^20 byte的数据，不太常用</p>
+</li>
+</ul>
+<p>所以如果一个运营商声称自己的传输带宽是1 Mbps，按照MB/s来算的话，它只有0.125 MB/s (megabyte per second)；按照MiB/s来算的话，它更是只有0.1192 MiB/s (mebibyte per second)。</p>
+<blockquote>
+<p>各单位之间换算关系式：</p>
+</blockquote>
+<ol>
+<li>Mbit/s / 8 = MB/s</li>
+<li>Mbit/s = 10^6 bit/s</li>
+<li>MiB/s = 2^20 * 8 bit/s</li>
+<li>Mbit/s = MiB/s * 0.1192</li>
+</ol>
+<h1 id="CCC"><a href="#CCC" class="headerlink" title="CCC"></a>CCC</h1><p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://blog.csdn.net/DoReAGON/article/details/100122750?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">Jupyter Notebook中运行.py文件</a></li>
+<li><a href="https://blog.csdn.net/lantianjialiang/article/details/78728268" target="_blank" rel="noopener">Mbit/s vs MB/s vs MiB/s</a></li>
+</ol>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我喝果汁<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          TinySu
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://tinysu.github.io/2020/06/14/毕设深度学习踩坑（1）/" title="毕设深度学习踩坑（1）" target="_blank">https://tinysu.github.io/2020/06/14/毕设深度学习踩坑（1）/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java多线程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">毕设</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/09/article4/" class="archive-article-date">
-        <time datetime="2020-06-09T10:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/09/article4/" target="_blank">通过dump线程查看线程问题</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java多线程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://tinysu.github.io/2020/06/14/%E6%AF%95%E8%AE%BE%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B8%A9%E5%9D%91%EF%BC%881%EF%BC%89/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/09/article2/" class="archive-article-date">
-        <time datetime="2020-06-09T10:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2020/06/14/%E6%88%91%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%BC%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          我文章常用的格式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/08/Hexo%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/09/article2/" target="_blank">通过dump线程查看线程问题</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#摘要："><span class="toc-number">1.</span> <span class="toc-text">摘要：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1、想在Jupyter-Notebook中运行-py文件"><span class="toc-number">2.</span> <span class="toc-text">1、想在Jupyter Notebook中运行.py文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、MiB-s是个什么单位"><span class="toc-number">3.</span> <span class="toc-text">2、MiB&#x2F;s是个什么单位</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CCC"><span class="toc-number">4.</span> <span class="toc-text">CCC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/09/article5/" class="archive-article-date">
-        <time datetime="2020-06-09T10:24:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/06/09/article5/" target="_blank">通过dump线程查看线程问题</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
+
+
+
+
   
+  <div id="gitment-ctn"></div>
   
-    </div></section>
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "毕设深度学习踩坑（1）" -->
+    var gitment = new Gitment({
+      id: "20200614142724",
+      owner: 'TinySu',
+      repo: 'blog-github-comment',
+      oauth: {
+        client_id: 'f8d9ced2a307bde633e7',
+        client_secret: 'ade61a4677ebe553f1641f2ae1a7d994ee2dd903',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
   
 
-    
 
 
           </div>
@@ -394,7 +530,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 <a href="http://yoursite.com/" target="_blank">TinySu</a>
+    		&copy; 2020 <a href="https://tinysu.github.io/" target="_blank">TinySu</a>
     	</div>
       	<div class="footer-right">
 			
@@ -425,9 +561,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
@@ -517,7 +653,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Java多线程</a>
+                <a href="javascript:void(0)" class="js-tag color3">毕设</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
               </li>
             
             <div class="clearfix"></div>
