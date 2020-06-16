@@ -133,7 +133,7 @@
 			</div>
 			
 				
-				<p style="font-size: 12px;">“就像这星星，无论这光芒再怎么遥远和微弱，也一定要发出来，照亮别人才行！”<p>
+				<p style="font-size: 12px;color: rgb(255, 255, 255);text-shadow: 0 0 5px rgb(69, 87, 247);">“就像这星星，无论这光芒再怎么遥远和微弱，也一定要发出来，照亮别人才行！”<p>
 			
 		
 		</nav>
@@ -498,35 +498,33 @@
 
 
 
-
-
+  
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "Hexo学习" -->
+    var gitment = new Gitment({
+      id: "20200608135524",
+      owner: 'TinySu',
+      repo: 'github_comment',
+      oauth: {
+        client_id: 'f8d9ced2a307bde633e7',
+        client_secret: 'ade61a4677ebe553f1641f2ae1a7d994ee2dd903',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
 
 
   
-      <section id="comments" class="comments">
-        <style>
-          .comments{margin:30px;padding:10px;background:rgba(255, 255, 255, 0.5)}
-          @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-        </style>
-        <div id="vcomment" class="comment"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var notify = 'false' == true ? true : false;
-  var verify = 'false' == true ? true : false;
-  new Valine({
-    av: AV,
-    el: '#vcomment',
-    notify: notify,
-    app_id: "zCv19TvgHa7W1ylitLsMyYgr-gzGzoHsz",
-    app_key: "sBv0g1gBd2yxbt8Non2LPXxX",
-    placeholder: "(๑•̀ㅂ•́)و✧high起来~",
-    avatar: "mm",
-  });
-</script>
 
-    </section>
+
+
+
   
 
 
